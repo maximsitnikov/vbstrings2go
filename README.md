@@ -13,7 +13,7 @@ This package contains analogs of the string functions of the VB programming lang
 $ go get github.com/maximsitnikov/vbstrings2go
 ```
 
-## what is implemented
+## What is implemented
 1. InStr
 2. Len
 3. Left
