@@ -1,6 +1,6 @@
 package vbstrings2go
 
-//InStr: search inside a string
+//InStr search inside a string
 func InStr(str1 string, str2 string) int {
 	r1 := []rune(str1)
 	r2 := []rune(str2)
@@ -20,7 +20,7 @@ func InStr(str1 string, str2 string) int {
 		return -1
 	default:
 		var found bool
-		for i := 0; i < l1-l2; i++ {
+		for i := 0; i <= l1-l2; i++ {
 			if r1[i] == r2[0] {
 				found = true
 				for j := 0; j < l2; j++ {
@@ -38,12 +38,12 @@ func InStr(str1 string, str2 string) int {
 	}
 }
 
-//Len: length of the string
+//Len length of the string
 func Len(str string) int {
 	return len([]rune(str))
 }
 
-//Left: selects characters from a string from the beginning
+//Left selects characters from a string from the beginning
 func Left(str string, length int) string {
 	if length == 0 {
 		return ""
@@ -59,7 +59,7 @@ func Left(str string, length int) string {
 	return strReturn
 }
 
-//Right: selects characters from a string from the end
+//Right selects characters from a string from the end
 func Right(str string, length int) string {
 	if length == 0 {
 		return ""
@@ -76,7 +76,7 @@ func Right(str string, length int) string {
 	return strReturn
 }
 
-//Mid: selects characters from the middle starting from position to the given length
+//Mid selects characters from the middle starting from position to the given length
 func Mid(str string, pos int, length int) string {
 	if length == 0 {
 		return ""
@@ -99,7 +99,7 @@ func Mid(str string, pos int, length int) string {
 	return strReturn
 }
 
-//MidSimple: selects characters from the middle from position to end of string
+//MidSimple selects characters from the middle from position to end of string
 func MidSimple(str string, pos int) string {
 	r := []rune(str)
 	l := len(r)
