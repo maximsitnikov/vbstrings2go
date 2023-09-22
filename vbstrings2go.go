@@ -38,6 +38,44 @@ func InStr(str1 string, str2 string) int {
 	}
 }
 
+//InStr reverse search inside a string
+func InStrRev(str1 string, str2 string) int {
+	r1 := []rune(str1)
+	r2 := []rune(str2)
+	l1 := len(r1)
+	l2 := len(r2)
+	switch {
+	case l1 == 0:
+		return -1
+	case l2 == 0:
+		return -1
+	case l1 == l2:
+		if str1 == str2 {
+			return 1
+		}
+		return -1
+	case l2 > l1:
+		return -1
+	default:
+		var found bool
+		for i := l1 - l2; i >= 0; i-- {
+			if r1[i] == r2[0] {
+				found = true
+				for j := 0; j < l2; j++ {
+					if r1[i+j] != r2[j] {
+						found = false
+						break
+					}
+				}
+				if found {
+					return i + 1
+				}
+			}
+		}
+		return -1
+	}
+}
+
 //Len length of the string
 func Len(str string) int {
 	return len([]rune(str))
