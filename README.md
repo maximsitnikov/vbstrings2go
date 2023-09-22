@@ -19,3 +19,4 @@ $ go get github.com/maximsitnikov/vbstrings2go
 3. Left
 4. Right
 5. Mid
+6. InStrRev
